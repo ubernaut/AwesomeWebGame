@@ -1,0 +1,33 @@
+<!doctype html><title>Minimal tQuery Page</title>
+<script src="./js/tquery-bundle.js"></script>
+<body><script>
+var world	= tQuery.createWorld().boilerplate().start();
+	var Earth	= tQuery.createSphere().addTo(world);
+	window.PlayerA = tQuery.createCube().addTo(world);
+	window.PlayerA.gun = tQuery.createCylinder().addTo(world);
+
+	window.PlayerA.translateY(.5);
+	window.PlayerA.gun.translateY(.5);
+	window.PlayerA.gun.scaleX(0.05);
+	window.PlayerA.gun.scaleY(0.3);
+	window.PlayerA.gun.scaleZ(0.05);
+	window.PlayerA.gun.rotateZ(90);
+
+	window.PlayerA.scaleX(0.1);
+	window.PlayerA.scaleY(0.1);
+	window.PlayerA.scaleZ(0.1);
+
+
+
+	window.PlayerB = tQuery.createCube().addTo(world);
+	window.PlayerB.translateY(-.5);
+	window.PlayerB.scaleX(0.1);
+	window.PlayerB.scaleY(0.1);
+	window.PlayerB.scaleZ(0.1);
+	window.PlayerB.gun = tQuery.createCylinder().addTo(world);
+	window.PlayerB.gun.translateY(-.5);
+	window.PlayerB.gun.scaleX(0.05);
+	window.PlayerB.gun.scaleY(0.3);
+	window.PlayerB.gun.scaleZ(0.05);
+	window.PlayerB.gun.rotateZ(90);
+</script></body>
